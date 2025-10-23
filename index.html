@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Eletroponto - Gerar Batidas</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+</head>
+<body>
+  <main class="container">
+    <img src="logo.png" alt="Logo Eletroponto" class="logo">
+    <h1>Gerar Batidas</h1>
+
+    <form id="appointments">
+      <fieldset id="dates">
+        <legend>Horários</legend>
+        <label for="ent1">Entrada 1</label>
+        <input type="time" id="ent1">
+        <label for="sai1">Saída 1</label>
+        <input type="time" id="sai1">
+        <label for="ent2">Entrada 2</label>
+        <input type="time" id="ent2">
+        <label for="sai2">Saída 2</label>
+        <input type="time" id="sai2">
+      </fieldset>
+
+      <fieldset id="fields">
+        <legend>Informações</legend>
+        <label for="cpfInput">Digite o CPF (apenas dígitos):</label>
+        <input type="text" id="cpfInput" maxlength="11" pattern="\d{11}" inputmode="numeric" title="Digite um CPF válido com 11 dígitos" required placeholder="Ex: 11144477735">
+        
+        <label for="month">Mês</label>
+        <select id="month" required>
+          <option value="1">Janeiro</option>
+          <option value="2">Fevereiro</option>
+          <option value="3">Março</option>
+          <option value="4">Abril</option>
+          <option value="5">Maio</option>
+          <option value="6">Junho</option>
+          <option value="7">Julho</option>
+          <option value="8">Agosto</option>
+          <option value="9">Setembro</option>
+          <option value="10">Outubro</option>
+          <option value="11">Novembro</option>
+          <option value="12">Dezembro</option>
+        </select>
+        
+        <label for="year">Ano</label>
+        <input id="year" type="number" min="1900" max="3000" value="2025">
+
+        <label>
+          <input type="checkbox" name="randomize" value="sim">Randomize
+        </label>
+      </fieldset>
+
+      <fieldset id="controls">
+        <legend>Ações</legend>
+        <button type="submit">Gerar</button>
+        <button type="button" onclick="baixarArquivo()">Baixar arquivo</button>
+        <button type="button" onclick="copiar()">Copiar</button>
+        <button type="button" onclick="limpar()">Limpar</button>
+      </fieldset>
+    </form>
+  </main>
+
+  <footer>
+    Desenvolvido por<a href="https://www.eletropontorn.com.br/" target="_blank">Eletroponto - Tecnologia em Ponto e Acesso</a>
+  </footer>
+  
+  <script src="script.js"></script>
+</body>
+</html>

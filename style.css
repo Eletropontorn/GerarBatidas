@@ -1,0 +1,191 @@
+/* ============================= */
+/* RESET & BASE                  */
+/* ============================= */
+html, body { 
+  height: 100%;
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* fonte moderna */
+}
+
+body {
+  background-color: #e0e0e0; /* cinza claro elegante */
+  display: flex;               
+  justify-content: center;     
+  align-items: center;         
+  flex-direction: column;      
+}
+
+/* ============================= */
+/* CONTAINER PRINCIPAL           */
+/* ============================= */
+.container {
+  width: 95%;
+  max-width: 800px;
+  min-height: 450px;
+  padding: 50px 40px;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.container:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 30px rgba(0,0,0,0.15);
+}
+
+/* ============================= */
+/* LOGO                          */
+/* ============================= */
+.logo {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto 25px; /* espaçamento abaixo da logo */
+  transition: transform 0.3s ease;
+}
+
+.logo:hover {
+  transform: scale(1.05); /* leve aumento ao passar o mouse */
+}
+
+/* ============================= */
+/* TÍTULOS H1 E H3               */
+/* ============================= */
+.container h1 {
+  font-size: 30px;
+  color: #2f3236;
+  margin: 6px 0 8px 0;
+  font-weight: 700;
+  letter-spacing: 0.6px;
+  line-height: 1.1;
+  text-transform: none;
+  position: relative;
+  display: inline-block;
+  padding-bottom: 6px;
+}
+
+.container h1::after {
+  content: "";
+  display: block;
+  height: 3px;
+  width: 48px;
+  margin: 8px auto 0;
+  border-radius: 3px;
+  background: linear-gradient(90deg, rgba(47,50,54,0.12), rgba(15,71,171,0.18));
+  opacity: 0.95;
+}
+
+.container h3 {
+  font-size: 14.5px;
+  color: #6d7176;
+  font-weight: 500;
+  margin: 6px 0 20px 0;
+  line-height: 1.4;
+  max-width: 760px;
+  margin-left: auto;
+  margin-right: auto;
+  opacity: 0.95;
+}
+
+/* ============================= */
+/* RESPONSIVO                     */
+/* ============================= */
+@media (max-width: 480px) {
+  .container h1 {
+    font-size: 24px;
+  }
+  .container h3 {
+    font-size: 13px;
+    padding: 0 6px;
+  }
+}
+
+/* ============================= */
+/* FOOTER                        */
+/* ============================= */
+footer {
+  position: fixed;      
+  bottom: 0;            
+  left: 0;              
+  width: 100%;          
+  background-color: #f5f5f5;
+  color: #333333;
+  text-align: center;
+  padding: 12px 0;
+  font-size: 15px;
+  box-shadow: 0 -3px 10px rgba(0,0,0,0.08);
+  z-index: 999;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+footer:hover {
+  background-color: #e8e8e8;
+}
+
+/* ============================= */
+/* LINKS DO FOOTER               */
+/* ============================= */
+footer a {
+  color: #5a2fcf;
+  text-decoration: none;
+  margin-left: 6px;
+  font-weight: 500;
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+footer a:hover {
+  color: #381a8f;  
+  text-shadow: 0 0 5px rgba(90, 47, 207, 0.3);
+}
+
+/* ============================= */
+/* BOTÕES PADRÃO                  */
+/* ============================= */
+button {
+  background-color: #0f47ab;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+  background-color: cornflowerblue;
+  transform: translateY(-2px);
+}
+
+fieldset {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 1rem;
+  margin-bottom: 1.5rem;
+  background: #f9f9f9;
+}
+
+legend {
+  padding: 0 0.5rem;
+  font-weight: bold;
+  color: #333;
+}
+
+/* ============================= */
+/* BOTOES DENTRO DE FIELDSET      */
+/* ============================= */
+#controls button {
+  margin: 6px 4px; /* 6px vertical, 4px horizontal */
+  min-width: 100px; /* opcional, deixa todos os botões com tamanho mínimo */
+}
+
+/* Para mobile: deixa os botões ocuparem mais largura e espaçamento maior */
+@media (max-width: 480px) {
+  #controls button {
+    display: block;
+    width: 90%;   /* ocupa quase toda largura */
+    margin: 8px auto; /* centralizado com espaço entre eles */
+  }
+}
